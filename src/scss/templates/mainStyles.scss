@@ -1,0 +1,44 @@
+.main {
+  width: 1415px;
+  margin: 0 auto;
+
+  &_left {
+    width: 319px;
+    height: 100px;
+    float: left;
+    background: $BLACK;
+    padding: 48px 0 250px;
+  }
+
+  &_right {
+    margin-left: 319px;
+    background: #ffffff;
+    height: 100px;
+  }
+
+  &__title {
+    font-family: $OPENSANS;
+    color: $YELLOW;
+    font-size: 28px;
+    letter-spacing: 0.7px;
+    padding-left: 27px;
+    margin-bottom: 57px;
+  }
+}
+
+.menu {
+  padding: 0 17px 0 18px;
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+    padding: 17px 0px 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.07);
+  }
+}
