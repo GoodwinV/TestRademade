@@ -1,44 +1,332 @@
 .main {
-  width: 1415px;
+  max-width: 1415px;
+  width: 100%;
   margin: 0 auto;
 
   &_left {
     width: 319px;
-    height: 100px;
     float: left;
     background: $BLACK;
-    padding: 48px 0 250px;
+    padding: 45px 0 250px;
   }
 
   &_right {
     margin-left: 319px;
     background: #ffffff;
-    height: 100px;
   }
 
   &__title {
     font-family: $OPENSANS;
     color: $YELLOW;
-    font-size: 28px;
+    font-size: 26px;
     letter-spacing: 0.7px;
-    padding-left: 27px;
-    margin-bottom: 57px;
+    padding-left: 25px;
+    margin-bottom: 47px;
+  }
+
+  &__header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 3px solid rgba(237, 237, 237, 0.4);
+    padding: 17px 0 19px;
+
+    &_left {
+      align-self: center;
+      margin-left: 38px;
+    }
+
+    &_right {
+      margin-right: 37px;
+    }
+  }
+
+  &__body {
+    margin-top: 50px;
+    width: 100%;
+
+    &_left {
+      float: left;
+      width: 95px;
+      margin-left: 34px;
+    }
+
+    &_right {
+      margin-left: 165px;
+    }
   }
 }
 
 .menu {
-  padding: 0 17px 0 18px;
-
-  &__item {
-  }
+  padding: 0 17px 0 24px;
 
   &__link {
     display: block;
-    padding: 17px 0px 15px;
+    padding: 20px 0px 18px;
+    margin-top: -3px;
     font-family: "Open Sans", sans-serif;
     font-size: 17px;
     font-weight: 300;
     color: #ffffff;
     border-bottom: 2px solid rgba(255, 255, 255, 0.07);
+    transition: background .1s linear;
+
+    &:hover {
+      border-left: 5px solid $YELLOW;
+      border-bottom: none;
+      background: $VIOLET;
+      margin: -3px -17px 2px -24px;
+      padding-left: 19px;
+    }
+
+    & i {
+      font-size: 23px;
+      margin-right: 14px;
+    }
+  }
+}
+
+.breadcrumbs {
+  font-family: $OPENSANS;
+  font-size: 16px;
+  font-weight: 700;
+
+  &__link {
+    color: $DARKGRAY;
+
+    &.active {
+      color: $VIOLET;
+    }
+  }
+
+  & i {
+    font-size: 15px;
+    color: $DARKGRAY;
+    margin: 0 19px 0 28px;
+  }
+}
+
+.navbar {
+
+  &__search {
+    display: inline-block;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    padding: 9px 21px 8px;
+    margin-right: 43px;
+  }
+
+  &__input {
+    width: 221px;
+    font-family: $OPENSANS;
+    font-size: 12px;
+    color: $BLACK;
+    border: none;
+    background: none;
+
+    &::placeholder {
+      color: $GRAY;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__submit {
+    background: none;
+    border: none;
+    padding: 0;
+
+    &:hover .fa-search {
+      color: $BLACK;
+    }
+  }
+
+  & .fa-search {
+    font-size: 17px;
+    color: #999999;
+    transition: .3s color ease-out;
+  }
+
+  &__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-right: 13px;
+  }
+
+  & .fa-bell {
+    font-size: 20px;
+    color: #dedede;
+    transition: .3s color ease-out;
+  }
+
+  &__notif {
+    position: relative;
+    margin-right: 40px;
+
+    &:hover .fa-bell {
+      color: $YELLOW;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    right: -4px;
+    bottom: 10px;
+    display: inline-block;
+    font-family: $OPENSANS;
+    font-size: 11px;
+    font-weight: 700;
+    color: #f4f4f4;
+    border-radius: 50%;
+    background-color: #f14e95;
+    padding: 2px 4px;
+  }
+
+  &__name {
+    font-family: $OPENSANS;
+    font-size: 16px;
+    font-weight: 700;
+    color: $DARKGRAY;
+
+    &:before {
+      content: 'Hello';
+      display: inline-block;
+      padding-right: 8px;
+    }
+  }
+}
+
+.profile {
+
+  &__avatar {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+  }
+
+  &__header {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ededed;
+  }
+
+  &__name {
+    display: inline-block;
+    font-family: $OPENSANS;
+    font-size: 21px;
+    font-weight: 700;
+    color: $DARKGRAY;
+    text-transform: uppercase;
+  }
+
+  &__status {
+    display: inline-block;
+    font-family: $OPENSANS;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    background: $YELLOW;
+    border-radius: 5px;
+    padding: 5px 8px;
+    letter-spacing: 1px;
+    margin-left: 14px;
+    vertical-align: top;
+    text-transform: uppercase;
+  }
+
+  &__position {
+    font-family: $OPENSANS;
+    color: $GRAY;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  &__body {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 91px;
+  }
+
+  &__contacts {
+    width: 61%;
+  }
+
+  &__phone, &__address {
+    display: inline-block;
+    width: 49%;
+    font-family: $OPENSANS;
+    font-weight: 700;
+  }
+
+  &__text {
+
+    &_gray {
+      font-size: 13px;
+      color: $GRAY;
+      text-transform: uppercase;
+    }
+
+    &_violet {
+      font-size: 15px;
+      color: $VIOLET;
+      margin-top: 9px;
+    }
+  }
+
+  &__button {
+    font-family: $OPENSANS;
+    font-size: 14px;
+    color: $YELLOW;
+    font-weight: 700;
+    background: $BLACK;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 8px 28px;
+    margin-right: 35px;
+    transition: all .3s ease-in;
+
+    &:hover {
+      background: $GRAY;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    width: 32%;
+    text-align: center;
+    margin-left: 34px;
+  }
+
+  &__tab {
+    font-family: $OPENSANS;
+    font-size: 14px;
+    font-weight: 700;
+    color: $BLACK;
+    padding: 0 15px 27px;
+    text-transform: uppercase;
+    flex-basis: 0;
+    flex-grow: 1;
+    border-bottom: 6px solid #ffffff;
+    transition: all .2s ease-in;
+
+    &:hover {
+      border-bottom: 6px solid $VIOLET;
+    }
+  }
+}
+
+// Made search bar smaller
+@media (max-width: 1180px) {
+  .navbar__input {
+    width: 170px;
   }
 }

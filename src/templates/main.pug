@@ -19,3 +19,43 @@
                     i.fa.fa-calendar.fa-fw(aria-hidden="true")
                     | Calendar
     .main_right
+        .main__header
+            .main__header_left
+                .breadcrumbs
+                    a.breadcrumbs__link(href="/") Customers
+                    i.fa.fa-chevron-right(aria-hidden="true")
+                    a.breadcrumbs__link.active(href="#") Max Jones
+            .main__header_right
+                .navbar
+                    .navbar__search
+                        input(type="text" placeholder="Search").navbar__input
+                        button(type="button").navbar__submit
+                            i.fa.fa-search
+                    a(href="#").navbar__notif
+                        i.fa.fa-bell(aria-hidden="true")
+                        .navbar__counter 4
+                    img(src="img/smallPhoto.png").navbar__img
+                    span.navbar__name Lauren
+        .main__body.cf
+            .main__body_left
+                img(src="img/avatar.png").profile__avatar
+            .main__body_right
+                .profile__header
+                    .profile__name Max Jones
+                    .profile__status Gold
+                    .profile__position Sales & Marketing
+                .profile__body
+                    .profile__contacts
+                        .profile__phone
+                            .profile__text_gray Phone
+                            .profile__text_violet (+31) 140 175 468
+                        .profile__address
+                            .profile__text_gray Address
+                            .profile__text_violet Binnenweg 50, Rotterdam
+                    .profile__buttonWrap
+                        button.profile__button
+                            | Create quote
+            .profile__tabs
+                a(href="#").profile__tab Overview
+                a(href="#").profile__tab Orders
+                a(href="#").profile__tab Payments
